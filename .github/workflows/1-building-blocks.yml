@@ -10,9 +10,9 @@ jobs:
     echo-exit:
         runs-on: ubuntu-latest
         steps: 
-            - name: failed step
+            - name: Successful step to say bye
               run: |
                 echo "Fail"
-                exit 1
+                exit 0
             - name: Say Bye
               run: echo "Goodbye!!" 
