@@ -1,0 +1,12 @@
+name: 2-workflow-events.yml
+
+on: 
+     push:
+     pull_request: 
+    
+jobs: 
+    echo: 
+        runs-on: ubuntu-latest 
+        steps:
+           - name: Show the trigger
+             run: echo "This is triggered by a(n) ${{github.eventname}}"
