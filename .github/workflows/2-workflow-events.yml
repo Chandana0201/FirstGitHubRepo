@@ -1,9 +1,11 @@
-name: 2-workflow-events.yml
+name: 2 Workflow events demo
 
 on: 
-     push:
      pull_request: 
-
+     schedule:
+        - cron: '*/5 * * * *' 
+     workflow_dispatch: # Allows manual triggering
+    
 permissions:
   actions: read
   contents: read
