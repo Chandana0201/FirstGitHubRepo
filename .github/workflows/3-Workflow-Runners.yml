@@ -1,0 +1,21 @@
+name: Workflow Runners demo
+
+on: 
+     -push:
+     -pull_request: 
+     -workflow_dispatch: # Allows manual triggering
+permissions:
+  actions: read
+  contents: read
+
+jobs: 
+    echo-ubuntu: 
+        runs-on: ubuntu-latest 
+        steps:
+           - name: Show the trigger
+             run: echo "This step is running on ${{ runner.os }}"
+    echo-windows:
+        runs-on: windows-latest
+        steps:
+           - name: Show the trigger
+             run: echo "This step is running on ${{ runner.os }}"
