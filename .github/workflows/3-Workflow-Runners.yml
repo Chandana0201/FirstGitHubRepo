@@ -1,9 +1,7 @@
 name: Workflow Runners demo
 
 on: 
-     push:
-     pull_request: 
-     workflow_dispatch: # Allows manual triggering
+    workflow_dispatch: # Allows manual triggering
 
 permissions:
   actions: read
