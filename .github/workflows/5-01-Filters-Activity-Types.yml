@@ -1,0 +1,14 @@
+name: 5 01 Filters Activity Types
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Echo PR event type
+              run: echo "The PR event type is ${{ github.event.action }}"
