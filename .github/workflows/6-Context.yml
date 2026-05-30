@@ -24,7 +24,7 @@ jobs:
                echo "The workflow job is ${{ github.job }}"
             - name: Retrive variables
               run: |
-               echo " variable value : ${{var.my_var}}"
+               echo " variable value : ${{vars.my_var}}"
             - name: Print Environment Variable 
               run: |
                echo "Environment variable at job level: $my_env"               
